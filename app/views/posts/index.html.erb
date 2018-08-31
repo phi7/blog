@@ -1,0 +1,10 @@
+ <h3>今までの投稿一覧</h3>
+ <% @posts.each do |post| %>
+      <div class="list">
+        <p>------------------------------------------</p>
+        <%= post.created_at %>
+        <%= post.theme %>
+        <%= link_to "語りを見る", post_path(post.id) %>
+        
+      </div>
+ <% end %>

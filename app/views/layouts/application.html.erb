@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HelloApp</title>
+    <title>Katare</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,29 @@
   </head>
 
   <body>
+    <header>
+      <li>
+        <%= link_to("新規投稿","/posts/new") %>
+      </li>
+      <li>
+        <%= link_to("Katareとは","/") %>
+      </li>
+      <li>
+        <%= link_to("投稿一覧", posts_path) %>
+      </li>
+    </header>
+    <div class="main">
+    <div class="main-logo">
+      <ruby>
+       <rb>語れ</rb>
+      <rp>（</rp>
+       <rt>カタレ</rt>
+       <rp>）</rp> 
+      </ruby>
+    </div>
+    <p>隙あらば、自分語りしましょう</p>
     <%= yield %>
+    
   </body>
 </html>
+
